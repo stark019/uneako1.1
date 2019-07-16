@@ -1,0 +1,27 @@
+<!--<div class="card" style="width: 20rem;">
+  {% if instance.image %}
+    <a href="{{ instance.get_absolute_url }}"><img class="card-img-top" src="{{ instance.image.url }}" alt="{{ instance.title}} logo"></a>
+    {% endif %}
+  <div class="card-body">
+    <h4 class="card-title">{{ instance.title }}</h4>
+    <p>&#8377; {{ instance.price }}</p>
+  </div>
+</div>-->
+{% load static %}
+
+          <div class="product-image">
+                <img src="{{ instance.image.url }}" alt="{{ instance.title}}">
+              <div class="shop-product-overlay">
+                <a href="{{ instance.get_absolute_url }}"><button type="button" class="btn btn-primary">Product Details</button></a>
+                <a href="#"><button type="button" class="btn btn-success">Add to Cart&nbsp;&nbsp;<i class="fas fa-cart-plus text-light"></i></button></a>
+              </div>
+
+              <div class="">
+                <span class="new-products">New</span>
+              </div>
+
+          </div>
+          <div class="product-content text-left mt-2">
+            <span class="font-weight-bolder text-dark product-name">{{ instance.title }}</span>
+            <span class="lead price text-success">&#8377; {{ instance.price }}</span>
+          </div>
